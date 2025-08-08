@@ -22,7 +22,7 @@ export default function Sidebar() {
             key={link.name}
             href={link.href}
             className={clsx(
-              "block px-[18px] py-[8px] rounded-full hover:bg-gray-100 hover:text-[#3A6C7B]",
+              "block px-[18px] py-[8px] font-semibold rounded-full hover:bg-gray-100 hover:text-[#3A6C7B]",
               pathname === link.href && "bg-gray-100 text-[#3A6C7B]"
             )}
           >

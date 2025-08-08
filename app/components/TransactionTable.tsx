@@ -165,7 +165,7 @@ export default function TransactionTable() {
       <div className="w-full flex items-center justify-start border-b border-[#49656E]">
         <button
           onClick={() => setTab("overview")}
-          className={`w-[121px] flex items-center justify-center px-[28px] py-[12px] ${
+          className={`w-[121px] font-semibold flex items-center justify-center px-[28px] py-[12px] ${
             tab === "overview" ? "border-b-2 border-[#4B8B9F] text-[#437D8E]" : ""
           }`}
         >
@@ -173,7 +173,7 @@ export default function TransactionTable() {
         </button>
         <button
           onClick={() => setTab("transactions")}
-          className={`w-[121px] flex items-center justify-center px-[28px] py-[12px] ${
+          className={`w-[121px] font-semibold flex items-center justify-center px-[28px] py-[12px] ${
             tab === "transactions" ? "border-b-2 border-[#4B8B9F] text-[#437D8E]" : ""
           }`}
         >
@@ -183,12 +183,12 @@ export default function TransactionTable() {
 
       {tab === "overview" ? (
         <>
-          <h2 className="mt-4 ml-4">Summary</h2>
+          <h2 className="mt-4 ml-4 font-semibold">Summary</h2>
           {renderTable()}
         </>
       ) : (
         <>
-          <h2 className="mt-4">Transactions</h2>
+          <h2 className="mt-4 ml-4 font-semibold">Transactions</h2>
           {renderTable()}
         </>
       )}
