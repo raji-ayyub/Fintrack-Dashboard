@@ -1,4 +1,8 @@
 // app/components/SummaryCards.tsx
+
+import Dots from '@/public/icons/div.svg';
+import Image from 'next/image';
+
 interface SummaryCardProps {
   label: string;
   amount: string;
@@ -6,9 +10,12 @@ interface SummaryCardProps {
 }
 
 const SummaryCard = ({ label, amount, change }: SummaryCardProps) => (
-  <div className="bg-gray-100 p-4 rounded w-full">
-    <h3 className="text-sm text-gray-500">{label}</h3>
-    <p className="text-2xl font-bold">{amount}</p>
+  <div className="bg-gray-100 p-[28px]  rounded-[20px] w-full">
+    <div className='w-full mb-[18px] flex items-center justify-between'>
+      <h3 className="text-sm text-gray-500 font-bold">{label}</h3>
+      <Image src={Dots} alt='dots' width={40} height={40} className="w-[20px] text-gray-400" />
+    </div>
+    <p className="text-2xl font-bold mb-[10px]">{amount}</p>
     <p className="text-green-600 text-sm">{change}</p>
   </div>
 );
